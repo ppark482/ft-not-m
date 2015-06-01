@@ -19,8 +19,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div class="header">
+<!--     <div class="header">
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -38,17 +37,16 @@
           </div>
         </div>
       </div>
+    </div> -->
+
+    <div class="container" ui-view>
     </div>
 
-    <div class="container">
-      <div ng-include="'home/home.html'" ng-controller="HomeCtrl"></div>
-    </div>
-
-    <div class="footer">
+<!--     <div class="footer">
       <div class="container">
         <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
       </div>
-    </div>
+    </div> -->
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -67,12 +65,14 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="app.js"></script>
-        <script src="home/HomeController.js"></script>
+        <script src="config.js"></script>
+        <script src="choose/ChooseController.js"></script>
         <script src="shared/SpotifyService.js"></script>
         <script src="shared/EchoNestService.js"></script>
         <!-- endbuild -->

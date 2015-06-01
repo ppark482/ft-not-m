@@ -9,7 +9,7 @@
 	 * Controller of the ftNotMApp
 	 */
 	angular.module('ftNotMApp')
-	  .controller('HomeCtrl', function ($scope) {
+	  .controller('ChooseCtrl', function ($scope) {
 	    $scope.awesomeThings = [
 	      'HTML5 Boilerplate',
 	      'AngularJS',
