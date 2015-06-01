@@ -16,7 +16,7 @@
 
 		function getSettings () {
 			return settings;
-		}
+		};
 
 		return {
 			getSettings : getSettings

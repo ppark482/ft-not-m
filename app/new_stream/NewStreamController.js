@@ -7,6 +7,10 @@
 
 		function NewStreamController ($scope) {
 
+			$scope.attributes = {
+
+			};
+
 		}; // end controller
 
 }());

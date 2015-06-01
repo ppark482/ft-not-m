@@ -1,1 +1,19 @@
 <h1>NEW STREAM</h1>
+<p>Customize your new playlist:</p>
+
+<form>
+	<input placeholder="Name Your Stream" ng-model="attributes.name">
+	<select name="Type of Stream">
+		<option ng-model="attributes.artist">Based on Artists</option>
+		<option ng-model="attributes.song">Based on Song</option>
+		<option ng-model="attributes.genre">Based on Genre</option>
+	</select>
+
+</form>
+
+<!-- artist - plays songs for the given artists
+artist-radio - plays songs for the given artists and similar artists
+genre-radio - plays songs from artists matching the given genre
+song-radio - plays songs similar to the song specified.
+catalog - the playlist is personalized based upon the given seed catalog. Results are limited to items listed in the given catalog.
+catalog-radio - the playlist is personalized based upon the given seed catalog. Results are limited to items listed in the given catalog and items that are similar to items in the given catalog. -->
