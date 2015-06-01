@@ -4,14 +4,9 @@
 
 		.config( function ($stateProvider, $urlRouterProvider) {
 
-			$urlRouterProvider.otherwise('/choose')
+			$urlRouterProvider.otherwise('/')
 
 			$stateProvider
-				.state('choose', {
-					url: '/choose',
-					controller: 'ChooseCtrl',
-					templateUrl: 'choose/choose.html' 
-				})
 
 				.state('new-stream', {
 					url: '/new-stream',
