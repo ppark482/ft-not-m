@@ -10,6 +10,7 @@
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -38,8 +39,10 @@
         </div>
       </div>
     </div> -->
-    <a ui-sref="new-stream">New</a>
-    <a ui-sref="existing">Existing</a>
+    <ul id="nav-bar">
+      <li ui-sref="new-stream"><i class="fa fa-plus"></i>New</li>
+      <li ui-sref="existing"><i class="fa fa-list"></i>Existing</li>
+    </ul>
 
     <div class="container" ui-view>
     </div>

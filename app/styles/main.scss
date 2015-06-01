@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'navbar';
 // bower:scss
 // endbower
 
@@ -11,6 +12,15 @@
 
 body {
   padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
