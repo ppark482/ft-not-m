@@ -1,4 +1,4 @@
-(function(){
+;(function(){
 
 	angular.module('ftNotMApp')
 		.factory('Spotify', SpotifyFactory);
