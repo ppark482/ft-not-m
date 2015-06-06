@@ -3,11 +3,14 @@
 	angular.module('ftNotMApp')
 		.controller('NewStreamCtrl', NewStreamController);
 
-		NewStreamController.$inject = ['$scope'];
+		NewStreamController.$inject = ['$scope', 'EchoNest'];
 
-		function NewStreamController ($scope) {
+		function NewStreamController ($scope, EchoNest) {
 
-			$scope.attributes {};
+			$scope.attributes = {};
+
+			EchoNest.getPlaylist();
+
 
 		}; // end controller
 
