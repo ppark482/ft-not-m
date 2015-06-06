@@ -1,15 +1,16 @@
-<h1>NEW STREAM</h1>
-<p>Customize your new playlist:</p>
+<section class="new-stream">
+	<h1>NEW STREAM</h1>
+	<p>Customize your new playlist:</p>
 
-<form>
-	<input placeholder="Name Your Stream" ng-model="attributes.name">
-	<select name="Type of Stream">
-		<option ng-model="attributes.artist">Based on Artists</option>
-		<option ng-model="attributes.song">Based on Song</option>
-		<option ng-model="attributes.genre">Based on Genre</option>
-	</select>
-
-</form>
+	<form>
+		<input placeholder="Name Your Stream" ng-model="attributes.name">
+		<select name="Type of Stream">
+			<option ng-model="attributes.artist">Based on Artists</option>
+			<option ng-model="attributes.song">Based on Song</option>
+			<option ng-model="attributes.genre">Based on Genre</option>
+		</select>
+	</form>
+</section>
 
 <!-- artist - plays songs for the given artists
 artist-radio - plays songs for the given artists and similar artists
