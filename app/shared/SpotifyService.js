@@ -14,7 +14,7 @@
 		};
 
 		function authorizeApp () {
-			$http.post('https://accounts.spotify.com/api/token', 'Authorization: Basic ' + settings.sharedSecret)
+			$http.post('https://accounts.spotify.com/api/token', 'Authorization: Basic ' + settings.clientSecret)
 				.success( function(data, status, headers, config) {
 					console.log(status);
 				})
