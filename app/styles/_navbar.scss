@@ -1,9 +1,24 @@
 #nav-bar {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	flex: 0 0 4em;
 	margin: 0;
-	height: 2em;
+	padding: 0;
 	background-color: HSLA(47, 73%, 85%, 1);
+
 	li {
-		display: inline;
+		flex: 1;
+		text-align: center;
 		cursor: pointer;
+		border-right: 1px solid white;
+
+		&:last-child {
+			border-right: none;
+		}
+	}
+
+	i {
+		margin-right: 6px;
 	}
 }
