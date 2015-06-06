@@ -19,40 +19,21 @@
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <div class="wrapper">
+      <ul id="nav-bar">
+        <li>
+          <a ui-sref="new-stream">
+            <i class="fa fa-plus"></i>New</li>
+          </a>
+        <li>
+          <a ui-sref="existing">
+            <i class="fa fa-list"></i>Existing
+          </a>
+        </li>
+      </ul>
 
-<!--     <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-            <a class="navbar-brand" href="#/">ftNotM</a>
-          </div>
-
-          <div class="collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <ul id="nav-bar">
-      <li ui-sref="new-stream"><i class="fa fa-plus"></i>New</li>
-      <li ui-sref="existing"><i class="fa fa-list"></i>Existing</li>
-    </ul>
-
-    <div class="container" ui-view>
+      <div class="container" ui-view></div>
     </div>
-
-<!--     <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div> -->
-
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>

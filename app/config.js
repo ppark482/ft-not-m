@@ -8,6 +8,12 @@
 
 			$stateProvider
 
+				.state('landing', {
+					url: '/',
+					controller: 'LandingCtrl',
+					templateUrl: 'landing/landing.html'
+				})
+
 				.state('new-stream', {
 					url: '/new-stream',
 					controller: 'NewStreamCtrl',
