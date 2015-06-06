@@ -1,11 +1,11 @@
 ;(function(){
 
 	angular.module('ftNotMApp')
-		.factory('Spotify', SpotifyFactory);
+		.factory('Spotify', Spotify);
 
-	SpotifyFactory.$inject = ['$q', '$scope', '$http'];
+	Spotify.$inject = ['$q', '$http'];
 
-	function SpotifyFactory ($q, $scope, $http) {
+	function Spotify ($q, $http) {
 
 		var settings = {
 			apiBase : 'https://api.spotify.com/v1/',
@@ -13,12 +13,41 @@
 			clientSecret : '396b3a7e1df64e8c8d0946ff02c2b0e3'
 		};
 
+		function authorizeApp () {
+			$http.post('https://accounts.spotify.com/api/token', 'Authorization: Basic ' + settings.sharedSecret)
+				.success( function(data, status, headers, config) {
+					console.log(status);
+				})
+				.error( function(data, status, headers, config) {
+					console.log('failed to authorize application');
+				});
+		}
+
 		function getSettings () {
 			return settings;
-		};
+		}
+
+		function sendPlaylist (data) {
+			authorizeApp();
+			var playlistUrl = settings.apiBase + '/v1/tracks/?ids=',
+					songIds = [];
+					songString = '';
+			angular.forEach(data.songs, function (x) {
+				songIds.push(x.id);
+			});
+			songString = songIds.join(',');
+			$http.get(playlistUrl + songString).
+				success( function(data, status, headers, config) {
+					console.log(data);
+				}).
+				error( function(data, status, headers,config) {
+					console.log('error retrieving spotify shit');
+				});
+		}
 
 		return {
-			getSettings : getSettings
+			getSettings : getSettings,
+			sendPlaylist : sendPlaylist
 		}
 
 	}; // end spotify factory
