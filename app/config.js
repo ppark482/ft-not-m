@@ -2,7 +2,7 @@
 
 	angular.module('ftNotMApp')
 
-		.config( function ($stateProvider, $urlRouterProvider) {
+		.config( function ($stateProvider, $urlRouterProvider, $httpProvider) {
 
 			$urlRouterProvider.otherwise('/')
 

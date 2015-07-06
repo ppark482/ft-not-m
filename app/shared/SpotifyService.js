@@ -9,18 +9,14 @@
 
 		var settings = {
 			apiBase : 'https://api.spotify.com/v1/',
-			clientID : '8d966c252c874946a133f10fa5e5febe',
-			clientSecret : '396b3a7e1df64e8c8d0946ff02c2b0e3'
+			clientID : 'f41111ca1d2c457786e0cfb5f70192ea',
+			clientSecret : '38f33bb2001b4227926707f3abb28e25'
 		};
 
+		var url = 'https://accounts.spotify.com/authorize/?client_id=f41111ca1d2c457786e0cfb5f70192ea&response_type=code&redirect_uri=http://localhost:9000/';
+
 		function authorizeApp () {
-			$http.post('https://accounts.spotify.com/api/token', 'Authorization: Basic ' + settings.clientSecret)
-				.success( function(data, status, headers, config) {
-					console.log(status);
-				})
-				.error( function(data, status, headers, config) {
-					console.log('failed to authorize application');
-				});
+			window.location = url;
 		}
 
 		function getSettings () {
@@ -47,7 +43,8 @@
 
 		return {
 			getSettings : getSettings,
-			sendPlaylist : sendPlaylist
+			sendPlaylist : sendPlaylist,
+			authorizeApp: authorizeApp
 		}
 
 	}; // end spotify factory

@@ -3,5 +3,5 @@
 
 	angular
 	  .module('ftNotMApp', ['ngCookies', 'ngResource', 'ui.router']);
-	  
+
 }());
